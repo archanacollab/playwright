@@ -1,0 +1,14 @@
+{
+  "name": "playwright-saucedemo-fixed",
+  "version": "1.0.0",
+  "description": "Playwright framework for testing SauceDemo site using JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "playwright": "^1.44.0"
+  }
+}
