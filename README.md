@@ -1,4 +1,4 @@
-# Playwright Framework: SauceDemo (Fixed Version)
+# Playwright Framework: SauceDemo 
 
 This project uses Playwright with JavaScript to test the [SauceDemo](https://www.saucedemo.com) site.
 
