@@ -28,7 +28,11 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
+<<<<<<< HEAD
       - name: Upload HTML reportt
+=======
+      - name: Upload HTML report
+>>>>>>> 0545eddbf3801f4cf0d8a42adc578da089348322
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
