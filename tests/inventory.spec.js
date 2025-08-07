@@ -5,8 +5,8 @@ const { InventoryPage } = require('../pages/InventoryPage');
 const fs = require('fs');
 const path = require('path');
 
-const loginData = readJSON('../playwright/Testdata/Login.json').logindata;
-const inventoryData = readJSON('../playwright/Testdata/Inventory.json').itemdata;
+const loginData = readJSON('Testdata/Login.json').logindata;
+const inventoryData = readJSON('Testdata/Inventory.json').itemdata;
 
 
 test('Login with valid credentials and add item', async ({ page }) => {
