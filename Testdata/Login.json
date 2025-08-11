@@ -3,6 +3,10 @@
         {
             "username": "standard_user",
             "password": "secret_sauce"
+        },
+         {
+            "username": "standarduser",
+            "password": "secret_sauce"
         }
     ]
 }

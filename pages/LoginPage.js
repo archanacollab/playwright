@@ -4,6 +4,7 @@ class LoginPage {
         this.usernameInput = '#user-name';
         this.passwordInput = '#password';
         this.loginButton = '#login-button';
+        this.errorButton= `//h3[@data-test='error']`;
     }
 
     async goto() {

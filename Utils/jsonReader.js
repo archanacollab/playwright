@@ -10,5 +10,4 @@ function readJSON(relativePathFromParent) {
     const rawData = fs.readFileSync(fullPath, 'utf-8');
     return JSON.parse(rawData);
 }
-
 module.exports = { readJSON };
