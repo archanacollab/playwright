@@ -24,11 +24,9 @@ jobs:
 
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-        working-directory: playwright 
 
       - name: Run Playwright tests
         run: npx playwright test
-        working-directory: playwright
 
       - name: Upload HTML report
         uses: actions/upload-artifact@v4

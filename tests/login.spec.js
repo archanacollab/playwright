@@ -1,13 +1,9 @@
 const { test, expect } = require('@playwright/test');
-
-
+const { readJSON } = require('../Utils/jsonReader');
 const { LoginPage } = require('../pages/LoginPage');
 const fs = require('fs');
 const path = require('path');
-
-// Read login data from JSON
-const loginDataPath = path.join(__dirname, '../Testdata/Login.json');
-const loginData = JSON.parse(fs.readFileSync(loginDataPath, 'utf-8')).logindata;
+const loginData =readJSON('Testdata/Login.json').logindata;
 
 test('Login with valid credentials', async ({ page }) => {
     const loginPage = new LoginPage(page);
