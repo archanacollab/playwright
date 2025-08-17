@@ -7,7 +7,7 @@ const path = require('path');
 
 const loginData = readJSON('Testdata/Login.json').logindata;
 const inventoryData = readJSON('Testdata/Inventory.json').itemdata;
-
+//tests
 test.beforeEach(async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goto();
