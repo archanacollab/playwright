@@ -21,7 +21,7 @@ test('add item', async ({ page }) => {
     }
  });
 
-    test('Verify items added to cart', async () => {
+    test('Verify items added to cart', async ({ page }) => {
         const cartCount = await page.locator('.shopping_cart_badge').textContent();
         expect(cartCount).toBe(String(inventoryData.length));
    
