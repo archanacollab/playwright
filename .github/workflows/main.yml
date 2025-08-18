@@ -29,7 +29,7 @@ jobs:
         working-directory: ./ 
         run: npx playwright test
 
-      - name: Upload HTML report
+      - name: Upload HTML report here
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
