@@ -10,19 +10,17 @@ const inventoryData = readJSON('Testdata/inventory.json').itemdata;
 //tests
 test.beforeEach(async ({ page }) => {
   const loginPage = new LoginPage(page);
-  await loginPage.goto();
-  await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.goto();
+    await loginPage.login(loginData[0].username, loginData[0].password);
+    await expect(page).toHaveURL(/inventory.html/);
 });
-test('add item', async ({ page }) => {
+test('add item and verify cart', async ({ page }) => {
     const inventoryPage = new InventoryPage(page);
-    await page.goto('/inventory.html');
     for (const item of inventoryData) {
         await inventoryPage.addToCart(item);
     }
+     const cartCount = await page.locator('.shopping_cart_badge').textContent();
+    expect(cartCount).toBe(String(inventoryData.length));
  });
 
-    test('Verify items added to cart', async ({ page }) => {
-        const cartCount = await page.locator('.shopping_cart_badge').textContent();
-        expect(cartCount).toBe(String(inventoryData.length));
    
-});

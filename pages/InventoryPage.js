@@ -6,6 +6,7 @@ class InventoryPage {
     async addToCart(itemname)
     {
          this.cart = `//div[text()='${itemname}']/ancestor::div[@class="inventory_item"]//button`;
+        await this.page.pause();
         await this.page.locator(this.cart).click();
     }
    

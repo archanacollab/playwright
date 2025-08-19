@@ -8,7 +8,9 @@ class LoginPage {
     }
 
     async goto() {
-        await this.page.goto('https://www.saucedemo.com');
+   
+      await this.page.goto('https://www.saucedemo.com', { waitUntil: 'domcontentloaded' });
+        await this.page.pause();
     }
 
     async login(username, password) {
